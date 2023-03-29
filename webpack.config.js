@@ -1,10 +1,21 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
+
+const envConfig = dotenv.config();
+
+const env = envConfig.error ? {} : envConfig.parsed;
+
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
 
 const stylesHandler = 'style-loader';
 
@@ -22,9 +33,15 @@ const config = {
     watchFiles: ['.'],
   },
   plugins: [
+    new webpack.DefinePlugin(envKeys),
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
+      DEBUG: false,
+    }),
     new HtmlWebpackPlugin({
       template: 'index.html',
       destination: 'index.html',
+      environment: process.env.NODE_ENV,
     }),
 
     // Add your plugins here

@@ -38,6 +38,7 @@ const controls: IPlayerControls = {
 
 if (videoWorks) {
   video.controls = false;
+  video.src = process.env.BACKEND_URL + '/static/output.mpd';
   videoControls.classList.remove('hidden');
 } else {
   alert('Cannot play video!');

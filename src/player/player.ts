@@ -90,9 +90,7 @@ export class PlayerView implements IPlayerView {
   }
 
   async init(): Promise<void> {
-    const response = await fetch(
-      'https://c6e8-178-70-176-177.eu.ngrok.io/v1/videos/output',
-    );
+    const response = await fetch(`${process.env.BACKEND_URL}/v1/videos/output`);
     const res = await response.json();
 
     this.actions = res.data;
