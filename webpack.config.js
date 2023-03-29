@@ -35,10 +35,6 @@ const config = {
   },
   plugins: [
     new webpack.DefinePlugin(envKeys),
-    new webpack.EnvironmentPlugin({
-      NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
-      DEBUG: false,
-    }),
     new FaviconsWebpackPlugin('./favicon.png'),
     new HtmlWebpackPlugin({
       template: 'index.html',
