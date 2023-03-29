@@ -3,6 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
+const dotenvWebpack = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -34,6 +35,9 @@ const config = {
     watchFiles: ['.'],
   },
   plugins: [
+    new dotenvWebpack({
+      systemvars: true,
+    }),
     new webpack.ProvidePlugin({
       process: 'process/browser',
     }),
