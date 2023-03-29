@@ -16,13 +16,16 @@ git clone https://github.com/AllPein/mts-hack-client
 yarn
 ```
 
-Выполните команду
+Создайте .env файл, скопируйте в него содержимое .env.example, заполните BACKEND_URL (можно собрать локально https://github.com/Dronicho/true-tech-hack)
+
+
+Запустите командой
 
 ```
 yarn serve
 ```
 
-Это запустит webpack dev server на 3000 порту, и вы сможете пользоваться плеером.
+Это запустит webpack dev server на 3000 порту, и вы сможете пользоваться плеером (при запущенном бекенде).
 
 ## Архитектура
 
