@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const dotenv = require('dotenv');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -38,6 +39,7 @@ const config = {
       NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
       DEBUG: false,
     }),
+    new FaviconsWebpackPlugin('./favicon.png'),
     new HtmlWebpackPlugin({
       template: 'index.html',
       destination: 'index.html',
