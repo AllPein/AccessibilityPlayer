@@ -35,5 +35,6 @@ yarn serve
 
 5. Возможность "на лету" включать/отключать функциональность
 
-<img width="879" alt="image" src="https://user-images.githubusercontent.com/35956979/228519168-84098763-9601-4f78-8325-b9a69e91c470.png">
+<img width="855" alt="Screenshot 2023-03-29 at 16 18 37" src="https://user-images.githubusercontent.com/35956979/228521485-7dc64042-2275-46f3-80e4-b6a956c8d628.png">
+
 
