@@ -34,6 +34,9 @@ const config = {
     watchFiles: ['.'],
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
     new webpack.DefinePlugin(envKeys),
     new FaviconsWebpackPlugin('./favicon.png'),
     new HtmlWebpackPlugin({
