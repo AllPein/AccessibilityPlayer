@@ -30,6 +30,53 @@ yarn serve
 
 ![image](https://user-images.githubusercontent.com/35956979/228590329-1ac9454f-cd35-4630-ac8b-fb7b3eea890c.png)
 
+Сервер отдает ссылку на видео в формате dash и конфиг для установки визуальных эффектов конкретно для этого видео.
+Пример отдаваемого конфига:
+```
+{
+  "video_name": "output",
+  "accessibility_config": [
+    {
+      "startTime": 12,
+      "endTime": 16,
+      "actions": [
+        "lowerContrast",
+        "blur"
+      ]
+    },
+    {
+      "startTime": 16,
+      "endTime": 18,
+      "actions": [
+        "lowerContrast"
+      ]
+    },
+    {
+      "startTime": 18,
+      "endTime": 21,
+      "actions": [
+        "lowerContrast",
+        "screamer"
+      ]
+    },
+    {
+      "startTime": 26,
+      "endTime": 30,
+      "actions": [
+        "lowerContrast",
+        "blur"
+      ]
+    },
+    {
+      "startTime": 32,
+      "endTime": 38,
+      "actions": [
+        "lowerSaturation"
+      ]
+    }
+  ]
+}
+```
 
 ## Фичи
 
