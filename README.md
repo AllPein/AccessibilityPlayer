@@ -1,4 +1,4 @@
-# 🚀 Web video player for True Tech hack MTS!
+# Web video player for True Tech hack MTS!
 
 Веб-версия плеера для людей с ограниченными возможностями
 
